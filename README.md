@@ -45,33 +45,42 @@ GAN 복원 파이프라인의 핵심 구현(생성기/판별기/손실/지표 �
 디렉토리 
 
 ├─ 1_GanModel/
-│  ├─ GanModel.py
-│  ├─ GanModel_exe.py
-│  ├─ GanModel_outPut.py
-│  └─ GanModel_PT/
-      ├─ discriminator_epoch_50.h5
-      └─ generator_epoch_50.h5
-├─ 2_ModelSet
-│  ├─ ModelSet.py
-│  ├─ Model_exe.py
-│  └─ Model_OutPut.py
-├─ 3_Value
-│  ├─ CropImage_Evaluation_EXE.py
-│  ├─ Image_Evaluation_EXE.py
-│  ├─ Image_Evaluation_Funtion.py
+│  ├─ GanModel.py                # GAN 모델 정의(Generator/Discriminator, 손실 구성 포함)
+│  ├─ GanModel_exe.py            # GAN 학습/복원 실행 로직(실험 스크립트 엔트리)
+│  ├─ GanModel_outPut.py         # 복원 결과 저장/시각화 유틸
+│  └─ GanModel_PT/               # 사전학습/최종 가중치(.h5)
+│      ├─ discriminator_epoch_50.h5
+│      └─ generator_epoch_50.h5
+├─ 2_ModelSet/
+│  ├─ ModelSet.py                # 비교용 복원 베이스라인(예: AE, SRCNN, U-Net, ResNet, DnCNN) 묶음
+│  ├─ Model_exe.py               # 베이스라인 실행/추론 파이프라인
+│  └─ Model_OutPut.py            # 베이스라인 출력 정리/저장
+├─ 3_Value/
+│  ├─ CropImage_Evaluation_EXE.py    # 객체 마스크/크롭 기준 정량 평가 실행
+│  ├─ Image_Evaluation_EXE.py        # 전체 이미지 기준 정량 평가 실행
+│  ├─ Image_Evaluation_Funtion.py    # 평가 지표 모듈(PSNR/SSIM/LPIPS/CIEDE2000/HistCosSim/MSE 등)
 │  └─ Template/
-      ├─ FruitImage_Real/
-      └─ TestDetecting_Rotation_evaluate _2.py
+│      ├─ FruitImage_Real/           # 템플릿 매칭용 클래스별 템플릿(실제 이미지 크롭)
+│      └─ TestDetecting_Rotation_evaluate_2.py  # 템플릿 매칭 평가(회전 등 조건 실험)
 │  └─ Yolo/
-      ├─ 08066best.pt
-      ├─ TestDetecting_Yolo_evaluate_1.py
-      └─ YoloDetection.py
-
+│      ├─ 08066best.pt               # YOLO 가중치(프로젝트에서 사용한 베스트)
+│      ├─ TestDetecting_Yolo_evaluate_1.py  # YOLO 평가 스크립트
+│      └─ YoloDetection.py           # YOLO 추론/후처리 유틸
 ├─ ImageData/
-│  ├─ Original_100/
-│  ├─ Yolo_Label_100/
-│  └─ SampleI_mage/
-├─ FeatureDataCreate.py
-
+│  ├─ Original_100/                  # 원본 이미지(샘플)
+│  ├─ Yolo_Label_100/                # YOLO 라벨(박스/클래스)
+│  └─ SampleI_mage/                  # 데모/문서용 샘플 이미지(이름 정리 권장: SampleImage)
+├─ FeatureDataCreate.py              # 컬러 컨디셔닝 등 부가 특성 생성(메타/피처 빌드)
 
  
+
+디렉토리의 역할
+1_GanModel/: 본 연구의 GAN 복원기를 학습/추론하는 핵심 코드와 학습된 가중치
+
+2_ModelSet/: Autoencoder, SRCNN, U-Net, ResNet50, DnCNN 등 비교 베이스라인을 동일 조건으로 실행하는 모듈.
+
+3_Value/: 정량 지표와 디텍션 성능 평가를 수행한다.
+
+ImageData/: 원본/라벨/샘플 데이터가 위치한다. (일부만 존재)
+
+FeatureDataCreate.py: RGB 조건 벡터생성 스크립트
