@@ -4,7 +4,7 @@ Research code for restoring projection-induced color distortions with a GAN and 
 
 ![GAN Restoration](https://img.shields.io/badge/GAN-Restoration-blue) ![WGAN-GP](https://img.shields.io/badge/WGAN--GP-Perceptual-green) ![Color Conditioning](https://img.shields.io/badge/Color-Conditioning-orange) ![Attention](https://img.shields.io/badge/Attention-Residual-purple) ![Detection](https://img.shields.io/badge/Template%20Matching-YOLO-red)
 
-## 📸 Project Overview
+## Project Overview
 
 ![Project Overview](images/restoredimagecomparison_R.png)
 *Projector-Camera system setup and the color distortion problem addressed by our GAN-based approach*
@@ -15,11 +15,11 @@ Research code for restoring projection-induced color distortions with a GAN and 
 
 **Approach**: ROI warping (homography) → GAN restoration → evaluation with Template Matching and YOLO.
 
-## 🎯 Why It Matters
+## Why It Matters
 
 Projector color/brightness and ambient light often shift object color distributions. For classes with similar shapes but discriminative colors (e.g., fruits), detectors misclassify frequently. Instead of retraining detectors per lighting condition, this project normalizes the input first.
 
-## 🏗️ Core Ideas
+## Core Ideas
 
 ![GAN Architecture](images/gan_architecture.png)
 *Overall architecture of our proposed GAN restoration model with Color Conditioning and Similarity Map branch*
@@ -63,7 +63,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 
 → *Nearly matches performance on undistorted originals*
 
-## 🔍 Detection Comparison
+## Detection Comparison
 
 | Projection-distorted | GAN-restored |
 |:--:|:--:|
@@ -71,19 +71,19 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 | ![Projection-distorted](images/Detecting_Distorted_R5_G75_B10.jpg) | ![GAN-restored](images/Detecting_Restorted_R5_G155_B55_gen_model5.jpg) |
 
 
-## ⚠️ Scope & Limitations
+## ⚠Scope & Limitations
 
 - **Focused on monochromatic** (single-color) projection first
 - Potential degradation under **spatially non-uniform backgrounds**, **highly reflective or high-chroma materials**, or **illumination RGB outside training coverage**
 - For production **SAR/AR**, we recommend extending to **multi-color/dynamic lighting** and targeting **real-time/lightweight models**
 
-## 📦 What's Included
+## What's Included
 
 - **GAN restoration pipeline** (generator, discriminator, losses, metrics)
 - **Detection evaluation routines** (Template Matching, YOLO) and scripts to reproduce tables/figures
 - **Reproducibility hooks** for sample data/weights (if full data cannot be released, provide samples + generation scripts)
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 <details open>
 <summary><b>Directory Tree</b></summary>
@@ -129,7 +129,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 - **FeatureDataCreate.py** — utilities to build RGB condition vectors / features
 
 <!--
-## 📖 Citation
+## Citation
 
 If you use this code, please cite the corresponding paper:
 
@@ -144,7 +144,7 @@ If you use this code, please cite the corresponding paper:
 
 -->
 
-## 📄 License & Contact
+## License & Contact
 
 - **License**: MIT License (see LICENSE file)
 - **Contact**: Issues tab or [maintainer@email.com](mailto:maintainer@email.com)
