@@ -36,7 +36,7 @@ Projector color/brightness and ambient light often shift object color distributi
 Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **object masks** (background excluded)
 
 
-## 📊 Key Results (Summary)
+## Key Results (Summary)
 
 ### Quantitative (object regions)
 
@@ -71,7 +71,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 | ![Projection-distorted](images/Detecting_Distorted_R5_G75_B10.jpg) | ![GAN-restored](images/Detecting_Restorted_R5_G155_B55_gen_model5.jpg) |
 
 
-## ⚠Scope & Limitations
+## Scope & Limitations
 
 - **Focused on monochromatic** (single-color) projection first
 - Potential degradation under **spatially non-uniform backgrounds**, **highly reflective or high-chroma materials**, or **illumination RGB outside training coverage**
