@@ -27,7 +27,7 @@ Projector color/brightness and ambient light often shift object color distributi
 
 ## Core Ideas
 
-![GAN Architecture](images/gan_architecture.png)
+![GAN Architecture](images/gan_architecture.PNG)
 *Overall architecture of our proposed GAN restoration model with Color Conditioning and Similarity Map branch*
 
 ### **GAN Restorer**
@@ -59,7 +59,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 
 ### Detection transfer
 
-![Detection Performance](images/detection_performance.png)
+<img src="images/detection_performance.png" alt="Detection Performance" width="600">
 *Detection accuracy comparison: Original images vs. Distorted images vs. Our restored images*
 
 | Method | Average Accuracy |
