@@ -1,5 +1,11 @@
 # GAN-based Image Restoration for Projector–Camera Systems
 
+**Official Paper (IEEE Access)**: [https://ieeexplore.ieee.org/document/11194146](https://ieeexplore.ieee.org/document/11194146)  
+**Authors**: Jeong Hyeon Lee, Meejin Kim, Sukwon Lee, and Changgu Kang  
+**Year**: 2025  
+**Publication**: IEEE Access  
+**DOI**: [10.1109/ACCESS.2025.11194146](https://doi.org/10.1109/ACCESS.2025.11194146)
+
 Research code for restoring projection-induced color distortions with a GAN and evaluating the downstream impact on object detection (Template Matching, YOLO). The restoration and detection stages are modular, so pre-trained detectors can be reused without retraining.
 
 ![GAN Restoration](https://img.shields.io/badge/GAN-Restoration-blue) ![WGAN-GP](https://img.shields.io/badge/WGAN--GP-Perceptual-green) ![Color Conditioning](https://img.shields.io/badge/Color-Conditioning-orange) ![Attention](https://img.shields.io/badge/Attention-Residual-purple) ![Detection](https://img.shields.io/badge/Template%20Matching-YOLO-red)
