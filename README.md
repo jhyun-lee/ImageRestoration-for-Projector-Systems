@@ -59,7 +59,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 
 ### Detection transfer
 
-<img src="images/detection_performance.png" alt="Detection Performance" width="600">
+<img src="images/detection_performance.png" alt="Detection Performance" width="800">
 *Detection accuracy comparison: Original images vs. Distorted images vs. Our restored images*
 
 | Method | Average Accuracy |
