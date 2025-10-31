@@ -142,20 +142,11 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 If you use this code & Data, please cite the corresponding paper:
 
 ```bibtex
-@article{Lee2025ProjectorGAN,
-  title   = {GAN-Based Image Restoration for Enhancing Object Detection in Projector-Camera Systems},
-  author  = {Lee, Jeong Hyeon and Kim, Meejin and Lee, Sukwon and Kang, Changgu},
-  journal = {IEEE Access},
-  year    = {2025},
-  doi     = {10.1109/ACCESS.2017.DOI}
+@article{lee2025gan,
+  title={GAN-Based Image Restoration for Enhancing Object Detection in Projector-Camera Systems},
+  author={Lee, Jeong Hyeon and Kim, Meejin and Lee, Sukwon and Kang, Changgu},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE}
 }
 
-
-## License & Contact
-
-- **License**: MIT License (see LICENSE file)
-- **Contact**: Issues tab or [maintainer@email.com](mailto:maintainer@email.com)
-
----
-
-> **Note**: This README focuses on the project description. Installation/running instructions, data/weights links, and reproducibility details can be added as separate sections when you're ready.
