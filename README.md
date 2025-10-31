@@ -118,6 +118,7 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 │      ├─ TestDetecting_Yolo_evaluate_1.py      # YOLO evaluation script
 │      └─ YoloDetection.py         # YOLO inference/post-processing utils
 ├─ ImageData/
+│  ├─ AllData/                     # Part of the Learning/Test Set (35,000_)
 │  ├─ Original_100/                # Sample originals
 │  ├─ Yolo_Label_100/              # YOLO labels (boxes/classes)
 │  └─ SampleI_mage/                # Sample/demo images
@@ -134,10 +135,11 @@ Compute LPIPS, CIEDE2000, PSNR, SSIM, Histogram Cosine Similarity, MSE on **obje
 - **ImageData/** — sample originals/labels/images (partial)
 - **FeatureDataCreate.py** — utilities to build RGB condition vectors / features
 
-<!--
+
+<
 ## Citation
 
-If you use this code, please cite the corresponding paper:
+If you use this code & Data, please cite the corresponding paper:
 
 ```bibtex
 @article{Lee2025ProjectorGAN,
@@ -148,7 +150,6 @@ If you use this code, please cite the corresponding paper:
   doi     = {10.1109/ACCESS.2017.DOI}
 }
 
--->
 
 ## License & Contact
 
