@@ -1,0 +1,1 @@
+All data was collected in the same environment. Object labels for the original data exist, and they match the projection data.
